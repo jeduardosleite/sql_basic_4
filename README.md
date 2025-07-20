@@ -8,7 +8,7 @@ Now i'll use concepts of:
 ----
 But, firstly we need create a bucket in AWS S3 and make a table (*query_total*)
 ```sql
-CREATE TABLE EXTERNAL transacoes(
+CREATE EXTERNAL TABLE transacoes(
   id_cliente BIGINT,
   id_transacao BIGINT,
   valor FLOAT,
@@ -21,7 +21,7 @@ WITH SERDEPROPERTIES (
   'escapeChar' = '\\'
 )
 STORED AS TEXTFILE
-LOCATION 's3://mod3-jeduardo/';
+LOCATION 's3://bucket-transacoes-jeduardo/';
 ```
 
 After that I carried out 7 querys. The codes are described within the file.
